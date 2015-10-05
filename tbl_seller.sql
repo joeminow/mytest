@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `tbl_seller` (
   `sel_nam` varchar(225) NOT NULL,
   `sel_cat` varchar(150) NOT NULL,
   `sel_add` varchar(500) NOT NULL,
-  `sel_phn` int(13) NOT NULL,
+  `sel_phn` varchar(20) NOT NULL,
   `sel_eml` varchar(100) NOT NULL,
   PRIMARY KEY (`sel_id`),
   KEY `sel_id` (`sel_id`)
@@ -40,9 +40,6 @@ CREATE TABLE IF NOT EXISTS `tbl_seller` (
 --
 -- Dumping data for table `tbl_seller`
 --
-
-INSERT INTO `tbl_seller` (`sel_id`, `sel_nam`, `sel_cat`, `sel_add`, `sel_phn`, `sel_eml`) VALUES
-(1, 'jumino shop12', 'electronok1334', 'bekasi122', 76677743, 'jumino@shop.com656');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
