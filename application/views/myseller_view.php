@@ -39,7 +39,8 @@
         </div>
 	        <div class="jumbotron">
 	       
-	        	<div class="table-responsive">          
+	        	<div class="table-responsive"> 
+								
 					  <table class="table">
 					    <thead>
 					      <tr>
@@ -53,7 +54,12 @@
 					      </tr>
 					    </thead>
 					    <tbody>
-					        <tr ng-repeat="sel in seller">
+						
+							<tr ng-if="seller.length === 0">
+								<td class="danger" colspan="8" align="center">No Data</td>
+							</tr>
+						
+					        <tr ng-repeat="sel in seller" ng-if="seller.length > 0">
 					        <td>{{$index + 1}}</td>
 					        <td>{{sel.sel_nam}}</td>
 					        <td>{{sel.sel_cat}}</td>

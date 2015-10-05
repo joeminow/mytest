@@ -12,6 +12,7 @@ class CIUnit_Controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+		error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     }
 
     public function index ($testCase = '')

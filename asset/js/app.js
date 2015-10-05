@@ -42,6 +42,7 @@ todoApp.controller('TodoCtrl', function ($scope, $http) {
 					  };
 		$http.post('index.php/api/add_seller', newTask).success(function(data){
 			$('#myModal').modal('hide');
+			$('#myModal').find('form')[0].reset();
 			$scope.refresh();
 			
 		}).error(function(data){
@@ -71,7 +72,6 @@ todoApp.controller('TodoCtrl', function ($scope, $http) {
 	
 	$scope.deleteTask = function(seller){
 		var id={
-
 				sel_id:seller.sel_id
 				}
 		var x = confirm("Are you sure you want to delete?");
